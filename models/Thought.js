@@ -4,7 +4,7 @@ const reactionSchema = require('./Reaction');
 
 const thoughtSchema = new Schema(
     {
-        thoughText: {
+        thoughtText: {
             type: String,
             required: true,
             minLength: 1,
@@ -29,9 +29,10 @@ const thoughtSchema = new Schema(
     }
 );
 
-thoughtSchema.virutal('reactionCount').get(function () {
+thoughtSchema.virtual('reactionCount').get(function () {
     return `${this.reactions.length}`
-}).get(function () {
+})
+thoughtSchema.virtual('dateFormat').get(function () {
     let formattedDate = `${this.createdAt.getFullYear()}-`;
     formattedDate += `${`0${this.createdAt.getMonth() + 1}`.slice(-2)}-`;
     formattedDate += `${`0${this.createdAt.getDate()}`.slice(-2)}`;

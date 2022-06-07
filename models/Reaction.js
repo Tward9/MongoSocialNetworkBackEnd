@@ -1,9 +1,9 @@
-const { Schema, model } = require('mongoose');
+const { Schema, Types, model, Mongoose, default: mongoose } = require('mongoose');
 
 const reactionSchema = new Schema(
     {
-        reactionID: {
-            objectId: new Schema.Types.objectId
+        reactionId: {
+            objectId: new mongoose.Schema.Types.ObjectId,
         },
         reactionBody: {
             type: String,
@@ -36,6 +36,6 @@ reactionSchema.get(function () {
     return formattedDate;
 });
 
-const Reaction = model('reaction', reactionSchema);
+// const Reaction = model('reaction', reactionSchema);
 
-module.exports = Reaction;
+module.exports = reactionSchema;

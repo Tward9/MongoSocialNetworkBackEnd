@@ -4,7 +4,7 @@
 
 The goal was to implement the back end for a model Social Network. You can create, update, and delete users. And other users to a friends list. Create and update thoughts, and add reactions to those thoughts.
 
-You can view a demo video ![here](https://drive.google.com/drive/folders/1gohdgV60PlqwrUvfX0RYrH1ZagL0KY4U?usp=sharing)
+You can view a demo video [here](https://drive.google.com/drive/folders/1gohdgV60PlqwrUvfX0RYrH1ZagL0KY4U?usp=sharing)
 
 ## Table of Contents
 
